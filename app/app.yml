@@ -1,0 +1,21 @@
+command: [
+  "streamlit", 
+  "run",
+  "app.py"
+]
+
+env:
+  - name: "DATABRICKS_WAREHOUSE_ID"
+    valueFrom: "sql-warehouse"
+  - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
+    value: "false"
+  - name: MAIN_DATA_TABLE
+    value: "tim.marketing.audience_builder_final_h3"
+  - name: SAVED_AUDIENCE_TABLE
+    value: "tim.marketing.saved_audiences"
+  - name: DIMENSIONAL_TABLE
+    value: "tim.marketing.audience_builder_final_dim"
+  - name: H3_COLUMN_NAME
+    value: "h3_code"
+  - name: GENIE_SPACE_ID
+    value: "01f0b43ffd50130d9b80ffc867d39c64"
